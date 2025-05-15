@@ -1,3 +1,81 @@
+# DIAGEN for Unreal
+
+A high-quality, local-first dialogue generation plugin for Unreal Engine (5.2+), powered by LLMs.
+
+---
+
+## Table of Contents
+
+1. [Explication about LLM](#1-explication-about-llm)  
+   - [1.1. Description (System Prompt)](#11-description-system-prompt)  
+   - [1.2. Input (User Prompt)](#12-input-user-prompt)  
+   - [1.3. History](#13-history)  
+   - [1.4. Training Dataset](#14-training-dataset)  
+   - [1.5. Parameters](#15-parameters)  
+     - [1.5.1. Diagen LLM Parameters](#151-diagen-llm-parameters)  
+     - [1.5.2. Diagen Prompt Parameters](#152-diagen-prompt-parameters)  
+     - [1.5.3. Temperature](#153-temperature)  
+     - [1.5.4. Context Size](#154-context-size)  
+     - [1.5.5. Toxicity Filtering](#155-toxicity-filtering)  
+2. [Diagen Files and Testing in the App (NO UNREAL)](#2-diagen-files-and-testing-in-the-app-no-unreal)  
+   - [2.1. Explanation of State Tags](#21-explanation-of-state-tags)  
+   - [2.2. Character Information (CI)](#22-character-information-ci)  
+   - [2.3. Topic Detection](#23-topic-detection)  
+   - [2.4. Diagen Event Files](#24-diagen-event-files)  
+   - [2.5. State Tags Weight](#25-state-tags-weight)  
+3. [Integration in Unreal](#3-integration-in-unreal)  
+   - [3.1. How to Install the Diagen Plugin](#31-how-to-install-the-diagen-plugin)  
+4. [Usage in Unreal](#4-usage-in-unreal)  
+   - [4.1. Prompting the Model](#41-prompting-the-model)  
+   - [4.2. Manage NPCs](#42-manage-npcs)  
+
+---
+
+## 1. Explication about LLM
+
+Diagen uses a Large Language Model (LLM) trained on vast amounts of text to generate contextually relevant dialogue based on four main components:
+
+- **System Prompt**  
+- **User Prompt**  
+- **History**  
+- **LLM Parameters**
+
+This enables dynamic interactions between players, NPCs, and the environment.
+
+### 1.1. Description (System Prompt)
+
+The system prompt provides context and defines the “role” or style of the LLM.  
+You can generate it dynamically from the Character Information Table.
+
+> _Example:_  
+> `You are Abrogail, the ruthless and cunning Empress of Cheliax, feared across the realms. You speak with sharp, biting cynicism.`
+
+[Back to Table of Contents](#table-of-contents)
+
+### 1.2. Input (User Prompt)
+
+Two types:
+
+- **Questions**: directed at NPCs  
+  _Example:_ `Hi! I'm Tom. How long have you been Queen?`
+- **Instructions**: commands for in-world reactions  
+  _Example:_ `You say that you demand this person to identify herself.`
+
+> ⚠️ Unprompted LLMs may answer unpredictably without initial context.
+
+[Back to Table of Contents](#table-of-contents)
+
+### 1.3. History
+
+For multi-turn conversations, include prior exchanges:
+System Prompt
+User #0
+Assistant #0
+User #1
+Assistant #1
+...
+User Current
+Assistant:
 
 Trim old history to preserve tokens.
 
@@ -17,7 +95,7 @@ Use custom lore, character backstories, and dialogue logs for more authentic res
 
 Configure global LLM settings with `START DIAGEN LOCAL`:
 
-![LLM Setup Example](docs/images/chapter_1_img_0.png)
+![LLM Setup Example](docs/images/embedded_1_0.png)
 
 | Parameter            | Default        | Description                                                      |
 |----------------------|----------------|------------------------------------------------------------------|
@@ -91,7 +169,7 @@ Use these CSV files to prototype NPC behavior before Unreal integration.
 
 State tags enable/disable context for NPCs.
 
-![State Tags Example](docs/images/chapter_7_img_1.png)
+![State Tags Example](docs/images/embedded_7_1.png)
 
 > Example: `angry`, `in_Brevoy`, `quest_of_the_frozen_flame`
 
@@ -105,7 +183,7 @@ CSV fields:
 - `stateTags`: Comma-separated tags required  
 - `description`: Text to include in system prompt  
 
-![Character Information CSV Example](docs/images/chapter_10_img_2.png)
+![Character Information CSV Example](docs/images/embedded_10_2.png)
 
 Descriptions merge at runtime based on active tags.
 
@@ -121,7 +199,7 @@ Defines dialogue triggers based on user input and tags.
 | `stateTags`  | Active tags needed to detect topic     |
 | `description`| Text prompt used for detection         |
 
-![Topic Detection CSV Example](docs/images/chapter_11_img_3.png)
+![Topic Detection CSV Example](docs/images/embedded_11_3.png)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -141,7 +219,7 @@ Configure in-game events and their effects:
 | `enable/disable`  | Tags to add/remove upon trigger                             |
 | `actionEvents`    | Blueprint functions to call                                 |
 
-![Diagen Event CSV Example](docs/images/chapter_12_img_4.png)
+![Diagen Event CSV Example](docs/images/embedded_12_4.png)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -154,7 +232,7 @@ Prioritize which CI descriptions take precedence.
 | `name`   | Tag name                       |
 | `weight` | Priority (higher = more urgent)|
 
-![State Tags Weight Example](docs/images/chapter_13_img_5.png)
+![State Tags Weight Example](docs/images/embedded_13_5.png)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -174,7 +252,7 @@ Diagen runs **locally** or **remotely** in UE5.2+.
 4. In `Edit > Project Settings > Plugins > Diagen`, paste your API Key  
 5. Confirm download of local model
 
-![Unreal Plugin Install Prompt](docs/images/chapter_15_img_6.png)
+![Unreal Plugin Install Prompt](docs/images/embedded_15_6.png)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -192,51 +270,50 @@ Use `BeginPlay` / `EndPlay` to manage the local process:
 - `STOP DIAGEN LOCAL`  
 - `Get Diagen Local Executable Status` (pure)
 
-Send prompts with:
+![BeginPlay/EndPlay Nodes](docs/images/embedded_16_9.png)
 
-![BeginPlay/EndPlay Nodes](docs/images/chapter_16_img_9.png)
+Prompt with:
 
 - **Raw**: `Diagen Prompt AI Model (Raw)`  
-  ![Prompt AI Model Raw](docs/images/chapter_16_img_10.png)
+  ![Prompt AI Model Raw](docs/images/embedded_16_10.png)
 
-- **Structured**: use `Create Prompt` before other prompt nodes  
-  ![Create Prompt Node](docs/images/chapter_16_img_11.png)
+- **Structured**: use `Create Prompt` beforehand  
+  ![Create Prompt Node](docs/images/embedded_16_11.png)
 
 Streamed response:
 
-![Generated Response Example](docs/images/chapter_16_img_12.png)
+![Generated Response Example](docs/images/embedded_16_12.png)
 
 [Back to Table of Contents](#table-of-contents)
 
 ### 4.2. Manage NPCs
 
-Use a single shared **SessionStates** array for all NPCs.
+Use a shared **SessionStates** array:
 
 #### NPC Lifecycle
 
-| Action      | Blueprint Node            |
-|-------------|---------------------------|
-| Add NPC     | `Add NPC`                 |
-| Remove NPC  | `Remove NPC`              |
-| Reset NPC   | `Reset NPC`               |
-| List NPCs   | `Get Session NPC Names`   |
+| Action    | Blueprint Node          |
+|-----------|-------------------------|
+| Add NPC   | `Add NPC`               |
+| Remove NPC| `Remove NPC`            |
+| Reset NPC | `Reset NPC`             |
+| List NPCs | `Get Session NPC Names` |
 
-![Add/Remove/Reset NPC Nodes](docs/images/chapter_17_img_13.png)
+![Add/Remove/Reset NPC Nodes](docs/images/embedded_17_13.png)
 
 #### State Tag Management
 
-| Action             | Blueprint Node                  |
-|--------------------|---------------------------------|
-| Append tag(s)      | `Append NPC State Tags`         |
-| Remove tag(s)      | `Remove NPC State Tags`         |
-| Clear all tags     | `Clear NPC State Tags`          |
-| Set new tags       | `Set NPC State Tags`            |
-| Query tags         | `Get NPC Enabled State Tags` / `Contains NPC State Tags` |
+| Action          | Blueprint Node                    |
+|-----------------|-----------------------------------|
+| Append tags     | `Append NPC State Tags`           |
+| Remove tags     | `Remove NPC State Tags`           |
+| Clear all tags  | `Clear NPC State Tags`            |
+| Set new tags    | `Set NPC State Tags`              |
+| Query tags      | `Get NPC Enabled State Tags` / `Contains NPC State Tags` |
 
-![Session State Tags Nodes](docs/images/chapter_17_img_14.png)  
-![Get/Contains Tag Nodes](docs/images/chapter_17_img_15.png)  
-
+![Session State Tags Nodes](docs/images/embedded_17_14.png)  
+![Get/Contains Tag Nodes](docs/images/embedded_17_15.png)  
 > ⚠️ `Bind All State Tags to NPC` is deprecated.  
-> ![Deprecated Node Warning](docs/images/chapter_17_img_16.png)
+![Deprecated Node Warning](docs/images/embedded_17_16.png)
 
 [Back to Table of Contents](#table-of-contents)
