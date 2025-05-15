@@ -5,14 +5,14 @@
 <br/><br/>
 
 ## [LLM Prompting](./LLM_prompting.md)
-    [Create Prompt](./LLM_prompting.md#TODO)<br/>
-    [Diagen Prompt AI model (Conversation)](./LLM_prompting.md#TODO)<br/>
-    [Diagen Prompt AI model (Raw)](./LLM_prompting.md#TODO)<br/>
-    [Diagen Prompt AI model (Topic detection)](./LLM_prompting.md#TODO)<br/>
-    [Diagen Prompt AI model (Topic validation)](./LLM_prompting.md#TODO)<br/>
-    [Diagen LLM Topic Detection](./LLM_prompting.md#TODO)<br/>
-    [Diagen LLM Topic Validation](./LLM_prompting.md#TODO)<br/>
-    [Instruction to Verbatime](./LLM_prompting.md#TODO)<br/>
+    [Create Prompt](./LLM_prompting.md#create-prompt)<br/>
+    [Diagen Prompt AI model (Conversation)](./LLM_prompting.md#diagen-prompt-ai-model-conversation)<br/>
+    [Diagen Prompt AI model (Raw)](./LLM_prompting.md#diagen-prompt-ai-model-raw)<br/>
+    [Diagen Prompt AI model (Topic detection)](./LLM_prompting.md#diagen-prompt-ai-model-topic-detection)<br/>
+    [Diagen Prompt AI model (Topic validation)](./LLM_prompting.md#diagen-prompt-ai-model-topic-validation)<br/>
+    [Diagen LLM Topic Detection](./LLM_prompting.md#diagen-llm-topic-detection)<br/>
+    [Diagen LLM Topic Validation](./LLM_prompting.md#diagen-llm-topic-validation)<br/>
+    [Instruction to Verbatime](./LLM_prompting.md#instruction-to-verbatime)<br/>
 
 ## [Local executable](./Local.md)
     [Start Diagen Local Executable (START DIAGEN LOCAL)](./Local.md#TODO)<br/>
@@ -81,6 +81,7 @@
 ## [Structs](./Classes_structs_enums.md#TODO)
     [Diagen Subsystem Config](./Classes_structs_enums.md#TODO)<br/>
     [Diagen Prompt Config](./Classes_structs_enums.md#TODO)<br/>
+    [Prompt Message](./Classes_structs_enums.md#TODO)<br/>
     [NPC Description Priority](./Classes_structs_enums.md#TODO)<br/>
     [Session State](./Classes_structs_enums.md#TODO)<br/>
     [Topic Trigger Pair](./Classes_structs_enums.md#TODO)<br/>
