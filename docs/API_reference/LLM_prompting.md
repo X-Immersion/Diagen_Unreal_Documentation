@@ -4,14 +4,16 @@
 
 ## On this page
 
-[Create Prompt](#create-prompt)<br/>
-[Diagen Prompt AI model (Conversation)](#diagen-prompt-ai-model-conversation)<br/>
-[Diagen Prompt AI model (Raw)](#diagen-prompt-ai-model-raw)<br/>
-[Diagen Prompt AI model (Topic detection)](#diagen-prompt-ai-model-topic-detection)<br/>
-[Diagen Prompt AI model (Topic validation)](#diagen-prompt-ai-model-topic-validation)<br/>
-[Diagen LLM Topic Detection](#diagen-llm-topic-detection)<br/>
-[Diagen LLM Topic Validation](#diagen-llm-topic-validation)<br/>
-[Instruction to Verbatime](#instruction-to-verbatime)<br/>
+The following nodes can be used to prompt the LLM model for a given task (conversation, topic detection, topic validation) or by giving all the LLM parameters (raw).
+
+* [Create Prompt](#create-prompt)<br/>
+* [Diagen Prompt AI model (Conversation)](#diagen-prompt-ai-model-conversation)<br/>
+* [Diagen Prompt AI model (Raw)](#diagen-prompt-ai-model-raw)<br/>
+* [Diagen Prompt AI model (Topic detection)](#diagen-prompt-ai-model-topic-detection)<br/>
+* [Diagen Prompt AI model (Topic validation)](#diagen-prompt-ai-model-topic-validation)<br/>
+* [Diagen LLM Topic Detection](#diagen-llm-topic-detection)<br/>
+* [Diagen LLM Topic Validation](#diagen-llm-topic-validation)<br/>
+* [Instruction to Verbatime](#instruction-to-verbatime)<br/>
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>

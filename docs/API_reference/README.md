@@ -15,16 +15,16 @@
     [Instruction to Verbatime](./LLM_prompting.md#instruction-to-verbatime)<br/>
 
 ## [Local executable](./Local.md)
-    [Start Diagen Local Executable (START DIAGEN LOCAL)](./Local.md#TODO)<br/>
-    [Stop Diagen Local Executable (STOP DIAGEN LOCAL)](./Local.md#TODO)<br/>
-    [Get Diagen Local Executable Status](./Local.md#TODO) - *Pure*<br/>
-    [Can Use Local Executable](./Local.md#TODO) - *Pure*<br/>
-    [Is Local Executable Installed](./Local.md#TODO) - *Pure*<br/>
+    [Start Diagen Local Executable (START DIAGEN LOCAL)](./Local.md#start-diagen-local-executable)<br/>
+    [Stop Diagen Local Executable (STOP DIAGEN LOCAL)](./Local.md#stop-diagen-local-executable)<br/>
+    [Get Diagen Local Executable Status](./Local.md#get-diagen-local-executable-status---pure) - *Pure*<br/>
+    [Can Use Local Executable](./Local.md#can-use-local-executable---pure) - *Pure*<br/>
+    [Is Local Executable Installed](./Local.md#is-local-executable-installed---pure) - *Pure*<br/>
 
 ## [Stream](./Stream.md)
-    [Bind Event to Diagen Stream](./Stream.md#TODO)<br/>
-    [Unbind Event to Diagen Stream](./Stream.md#TODO)<br/>
-    [Unbind All Events to Diagen Stream](./Stream.md#TODO)<br/>
+    [Bind Event to Diagen Stream](./Stream.md#bind-event-to-diagen-stream)<br/>
+    [Unbind Event to Diagen Stream](./Stream.md#unbind-event-to-diagen-stream)<br/>
+    [Unbind All Events to Diagen Stream](./Stream.md#unbind-all-events-to-diagen-stream)<br/>
 
 ## [Diagen Session](./Diagen_session.md)
     [Add NPC](./Diagen_session.md#TODO) - *previously InitSession()*<br/>
@@ -92,7 +92,7 @@
     [Topic Table](./Classes_structs_enums.md#TODO)<br/>
     [Trigger Option Table](./Classes_structs_enums.md#TODO)<br/>
     [Prefix Option Table](./Classes_structs_enums.md#TODO)<br/>
-    [Initial Session States Table](./Classes_structs_enums.md#TODO)<br/>
+    <i style="color: red">Deprecated</i> - [Initial Session States Table](./Classes_structs_enums.md#TODO)<br/>
 
 ## [Enums](./Classes_structs_enums.md#TODO)
     [Diagen Subsystem Status](./Classes_structs_enums.md#TODO)<br/>
