@@ -139,7 +139,7 @@ static void UDiagenStateTagsBPLibrary::GetNPCEnabledStateTags()
 
 Get the state tags for the given NPC on the current session.
 
-![Node Get NPC Tags](/docs/images/node_get_npc_state_tags.png)
+![Node Get NPC Tags](/docs/images/node_get_npc_enabled_state_tags.png)
 
 ### Parameters
 
@@ -166,7 +166,7 @@ static void UDiagenStateTagsBPLibrary::SetNPCStateTags()
 
 Set the state tags for the given NPC on the current session. Uses [Append NPC State Tags](#append-npc-state-tags) if you prefer to add the tags to those already existing.
 
-![Node Set NPC Tags](/docs/images/node_get_npc_state_tags.png)
+![Node Set NPC Tags](/docs/images/node_set_npc_state_tags.png)
 
 ### Parameters
 
