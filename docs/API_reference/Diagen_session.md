@@ -12,7 +12,7 @@ The following nodes can be used to manage the Diagen session states, containing 
 * [Get Session NPC Names](#get-session-npc-names)<br/>
 * [Save Session States](#save-session-states)<br/>
 * [Load Session States](#load-session-states)<br/>
-* <i style="color: red">Deprecated</i> - [Reset Session](#reset-session---deprecated)<br/>
+* <i style="color: red">**Deprecated**</i> - [Reset Session](#reset-session---deprecated)<br/>
 * [Update Session Array](#update-session-array)<br/>
 * [Update Session Int](#update-session-int)<br/>
 * [Update Session String](#update-session-string)<br/>
@@ -170,7 +170,7 @@ Load the current session from 'Saved' dir.
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
 
-## Reset Session - <i style="color: red">Deprecated</i>
+## Reset Session - <i style="color: red">**Deprecated**</i>
 
 C++ Function: 
 ```cpp

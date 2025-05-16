@@ -33,7 +33,7 @@
     [Get Session NPC Names](./Diagen_session.md#TODO)<br/>
     [Save Session States](./Diagen_session.md#TODO)<br/>
     [Load Session States](./Diagen_session.md#TODO)<br/>
-    <i style="color: red">Deprecated</i> - [Reset Session](./Diagen_session.md#TODO)<br/>
+    <i style="color: red">**Deprecated**</i> - [Reset Session](./Diagen_session.md#TODO)<br/>
     [Update Session Array](./Diagen_session.md#TODO)<br/>
     [Update Session Int](./Diagen_session.md#TODO)<br/>
     [Update Session String](./Diagen_session.md#TODO)<br/>
@@ -57,8 +57,8 @@
     [Contains NPC State Tags](./Diagen_state_tags.md#TODO)<br/>
     [Get NPC State Tags](./Diagen_state_tags.md#TODO)<br/>
     [Set NPC State Tags](./Diagen_state_tags.md#TODO)<br/>
-    <i style="color: red">Deprecated</i> - [Bind All State Tags to NPC](./Diagen_state_tags.md#TODO)<br/>
-    <i style="color: red">Deprecated</i> - [Get NPC All State Tags](./Diagen_state_tags.md#TODO)<br/>
+    <i style="color: red">**Deprecated**</i> - [Bind All State Tags to NPC](./Diagen_state_tags.md#TODO)<br/>
+    <i style="color: red">**Deprecated**</i> - [Get NPC All State Tags](./Diagen_state_tags.md#TODO)<br/>
 
 ## [Utilities](./Utilities.md)
     [Get NPC State](./Utilities.md#TODO)<br/>
@@ -73,7 +73,7 @@
     [On Diagen Response](./Delegates.md#TODO)<br/>
     [On Diagen Topic Response](./Delegates.md#TODO)<br/>
     [On Diagen Topic Validation Response](./Delegates.md#TODO)<br/>
-    <i style="color: red">Deprecated</i> - [On Topic Initialized](./Delegates.md#TODO)<br/>
+    <i style="color: red">**Deprecated**</i> - [On Topic Initialized](./Delegates.md#TODO)<br/>
 
 ## [Classes](./Classes_structs_enums.md#TODO)
     [Diagen Plugin Settings](./Classes_structs_enums.md#TODO)<br/>
@@ -92,7 +92,7 @@
     [Topic Table](./Classes_structs_enums.md#TODO)<br/>
     [Trigger Option Table](./Classes_structs_enums.md#TODO)<br/>
     [Prefix Option Table](./Classes_structs_enums.md#TODO)<br/>
-    <i style="color: red">Deprecated</i> - [Initial Session States Table](./Classes_structs_enums.md#TODO)<br/>
+    <i style="color: red">**Deprecated**</i> - [Initial Session States Table](./Classes_structs_enums.md#TODO)<br/>
 
 ## [Enums](./Classes_structs_enums.md#TODO)
     [Diagen Subsystem Status](./Classes_structs_enums.md#TODO)<br/>
