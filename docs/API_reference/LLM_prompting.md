@@ -36,7 +36,7 @@ Create a LLM prompt for the given NPC, based on the current [Session](#TODO). Th
 | Session States        | const TArray<[FSessionState](#TODO)>& | - | The current session state array |
 | NPC Name              | const FString& | *empty string*    | The name of the NPC. It must have been added to the session |
 | Message               | const FString& | *empty string*    | The message prompted to the LLM |
-| Character Information | [UDataTable](#TODO)* | `nullptr`   | The CI Table used to create the NPC system prompt |
+| Character Information | UDataTable*    | `nullptr`         | The [CI table](#TODO) used to create the NPC system prompt |
 | Overwrite Description | const FString& | *empty string*    | If provided, override the system prompt with the given value |
 | Max Characters        | const int32    | `0`               | The system prompt max character. Have no effect if `Overwrite Description` is provided |
 
@@ -199,7 +199,7 @@ Prompt the LLM model for topic detection. If Diagen executable is busy, the prom
 | NPC Name          | const FString& | *empty string*        | The name of the NPC |
 | Speaker Name      | const FString& | *empty string*        | The name of speaking person. Can be either the Player or the NPC, depending on which topic you want to detect |
 | Session States    | const TArray<[FPromptMessage](#TODO)>& | - | The current session state array |
-| Topics Table      | [UDataTable](#TODO)* | `nullptr`       | The DataTable containing the topics |
+| Topics Table      | UDataTable*    | `nullptr`             | The [Topic table](#TODO) containing the topics |
 | Optional GUID     | const FGuid&   | `{00000000-0000-0000-0000-000000000000}` | Force to use a specific GUID with this prompting. If not set or invalid, a new GUID will be generated and returned |
 | Logs              | const bool     | `true`                | Indicate if UE logs should be printed to the console
 | On Response       | const [FOnTopicResponse](#TODO)& | -   | Delegate event called when the model have generated the sentence (or if an error occured).

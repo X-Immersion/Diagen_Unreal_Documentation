@@ -111,7 +111,7 @@ Get the list of all NPCs defined in the current session.
 
 | Name          | Type             | Description |
 | ------------- | ---------------- | ----------- |
-| Out NPC Names | TArray<FString>& | The list of all NPC in the session |
+| Out NPC Names | TArray\<FString>& | The list of all NPC in the session |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -189,7 +189,7 @@ Reset the current session for the NPC with the given [Session state table](#TODO
 | Name           | Type           | Default value      | Description |
 | -------------  | -------------- | ------------------ | ----------- |
 | Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states |
-| Initial States | [UDataTable](#TODO)* | `nullptr`    | ??? Cannot be empty but not used in C++ code. Just put anything |
+| Initial States | UDataTable* | `nullptr`    | [???](#TODO) Cannot be empty but not used in C++ code. Just put anything |
 | NPC Name       | const FString& | *empty string*     | The name of the NPC to be reset |
 
 ### Return Value
@@ -226,7 +226,7 @@ The following attributes can be used as an array of string:
 | Session States | TArray<[FSessionState](#TODO)>& | -  | The current session states  |
 | NPC Name       | const FString& | *empty string*      | The NPC name to change the attribute |
 | Attribute      | const [ESessionAttributeType](#TODO)& | The attribute to update (see valid array attributes above) |
-| Value          | const TArray<FString>& | *empty array* | The value to update the attribute with |
+| Value          | const TArray\<FString>& | *empty array* | The value to update the attribute with |
 | Append         | const bool     | `false`             | If set to `true`, append the given array to the already existing one instead of replacing it . |
 
 ### Return Value
@@ -309,7 +309,7 @@ The following attributes can be used as a string:
 
 C++ Function: 
 ```cpp
-static TArray<FString> UDiagenSessionBPLibrary::GetSessionArray()
+static TArray\<FString> UDiagenSessionBPLibrary::GetSessionArray()
 ```
 
 Get the current session `TArray<FString>` [attribute](#TODO) for the given NPC. 
@@ -335,7 +335,7 @@ The following attributes can be used as an array of string:
 
 | Name          | Type              | Description           |
 | ------------- | ----------------- | --------------------- |
-| Return Value  | TArray<FString>   | The attribute value   |
+| Return Value  | TArray\<FString>   | The attribute value   |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -447,7 +447,7 @@ Add the LLM conversation entry (user question + LLM response) to the history for
 | Name           | Type           | Default value        | Description |
 | -------------- | -------------- | -------------------- | ----------- |
 | Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
-| NPC Name       | const FString& | *empty string*       | The NPC name to reset the history |
+| NPC Name       | const FString& | *empty string*       | The NPC name to update the history |
 | Question       | const FString& | *empty string*       | The message prompted to the LLM model |
 | Answer         | const FString& | *empty string*       | The response generated from the LLM model |
 | Keep N Entries | const inr32    | `8`                  | The maximum amount of entries to keep in history. If there are more, the oldest entry will be removed | 
