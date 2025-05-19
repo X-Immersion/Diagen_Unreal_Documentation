@@ -25,7 +25,7 @@ C++ Function:
 static void UDiagenLlmBPLibrary::CreatePrompt()
 ```
 
-Create a LLM prompt for the given NPC, based on the current [Session](#TODO). The NPC prompt history is included (if any). The [prompt](#TODO) output array can then be used with the nodes [Diagen Prompt AI model (Conversation)](#diagen-prompt-ai-model-conversation) and [Instruction to Verbatime](#instruction-to-verbatime).
+Create a LLM prompt for the given NPC, based on the current [Session](./Classes_structs_enums.md#session-state). The NPC prompt history is included (if any). The [prompt](./Classes_structs_enums.md#prompt-message) output array can then be used with the nodes [Diagen Prompt AI model (Conversation)](#diagen-prompt-ai-model-conversation) and [Instruction to Verbatime](#instruction-to-verbatime).
 
 ![Node Create Prompt](/docs/images/node_create_prompt.png)
 
@@ -33,10 +33,10 @@ Create a LLM prompt for the given NPC, based on the current [Session](#TODO). Th
 
 | Name                  | Type           | Default value     | Description |
 | --------------------- | -------------- | ----------------- | ----------- |
-| Session States        | const TArray<[FSessionState](#TODO)>& | - | The current session state array |
+| Session States        | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session state array |
 | NPC Name              | const FString& | *empty string*    | The name of the NPC. It must have been added to the session |
 | Message               | const FString& | *empty string*    | The message prompted to the LLM |
-| Character Information | UDataTable*    | `nullptr`         | The [CI table](#TODO) used to create the NPC system prompt |
+| Character Information | UDataTable*    | `nullptr`         | The [CI table](./Classes_structs_enums.md#character-information-table-ci-table) used to create the NPC system prompt |
 | Overwrite Description | const FString& | *empty string*    | If provided, override the system prompt with the given value |
 | Max Characters        | const int32    | `0`               | The system prompt max character. Have no effect if `Overwrite Description` is provided |
 
@@ -44,7 +44,7 @@ Create a LLM prompt for the given NPC, based on the current [Session](#TODO). Th
 
 | Name          | Type        | Description |
 | ------------- | ----------- | ----------- |
-| Prompt        | TArray<[FPromptMessage](#TODO)>& | The generated prompt |
+| Prompt        | TArray<[FPromptMessage](./Classes_structs_enums.md#session-state)>& | The generated prompt |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -56,7 +56,7 @@ C++ Function:
 static FGuid UDiagenLlmBPLibrary::Prompt()
 ```
 
-Prompt the LLM model with the given prompt messages. If Diagen executable is busy, the prompt will be added to a queue and automatically processed by the LLM when available. When the LLM response have been generated, the event [On Response](#TODO) will be executed. You can use the node [Bind Event to Diagen Stream](#TODO) with the event [On Diagen Stream Response Part](#TODO) to get the LLM stream response.
+Prompt the LLM model with the given prompt messages. If Diagen executable is busy, the prompt will be added to a queue and automatically processed by the LLM when available. When the LLM response have been generated, the event [On Response](./Delegates.md#on-diagen-response) will be executed. You can use the node [Bind Event to Diagen Stream](./Stream.md#bind-event-to-diagen-stream) with the event [On Diagen Stream Response Part](./Delegates.md#on-diagen-stream-response-part) to get the LLM stream response.
 
 ![Node Diagen Prompt AI model Conversation](/docs/images/node_diagen_prompt_ai_model_conversation.png)
 
@@ -68,7 +68,7 @@ Prompt the LLM model with the given prompt messages. If Diagen executable is bus
 | Diagen Prompt Config  | const [FDiagenPromptConfig](#TODO)& | *default prompt config* | The LLM prompt configuration |
 | Optional GUID         | const FGuid&  | `{00000000-0000-0000-0000-000000000000}` | Force to use a specific GUID with this prompting. If not set or invalid, a new GUID will be generated and returned |
 | Logs                  | const bool    | `true`                | Indicate if UE logs should be printed to the console |
-| On Response           | const [FOnDiagenResponse](#TODO) | -  |  Delegate event called when the model have generated the sentence (or if an error occured). |
+| On Response           | const [FOnDiagenResponse](./Delegates.md#on-diagen-response) | -  |  Delegate event called when the model have generated the sentence (or if an error occured). |
 
 ### Return values
 

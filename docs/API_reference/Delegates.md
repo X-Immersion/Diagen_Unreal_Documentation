@@ -124,8 +124,8 @@ Use the nodes *Add Custom Event...* or *Create Event* to bind this event to the 
 | ----------------- | --------------------- | -------------------------- |
 | Success           | bool                  | `true` if the generation was successful, `false` if an error occured |
 | Response or Error | FString               | The LLM topic validation strength, or the LLM raw response |
-| Topic             | FString               | The detected topic (ONLY if the LLM response strength is `>= 3`) |
-| Trigger           | FString               | The topic trigger (ONLY if the LLM response strength is `>= 3`) |
+| Topic             | FString               | The detected topic (**ONLY** if the LLM response strength is `>= 3`) |
+| Trigger           | FString               | The topic trigger (**ONLY** if the LLM response strength is `>= 3`) |
 | Guid              | const FGuid&          | The Guid associated with this prompt |
 
 <!------------------------------------------------------------------------------------------------------------------------------->

@@ -75,25 +75,27 @@
     [On Diagen Topic Validation Response](./Delegates.md#on-diagen-topic-validation-response)<br/>
     <i style="color: red">**Deprecated**</i> - [On Topic Initialized](./Delegates.md#deprecated---on-topic-initialized)<br/>
 
-## [Classes](./Classes_structs_enums.md#TODO)
-    [Diagen Plugin Settings](./Classes_structs_enums.md#TODO)<br/>
+## [Classes](./Classes_structs_enums.md#classes---uclass)
+    [Diagen Plugin Settings](./Classes_structs_enums.md#diagen-plugin-settings)<br/>
 
-## [Structs](./Classes_structs_enums.md#TODO)
-    [Diagen Subsystem Config](./Classes_structs_enums.md#TODO)<br/>
-    [Diagen Prompt Config](./Classes_structs_enums.md#TODO)<br/>
-    [Prompt Message](./Classes_structs_enums.md#TODO)<br/>
-    [NPC Description Priority](./Classes_structs_enums.md#TODO)<br/>
-    [Session State](./Classes_structs_enums.md#TODO)<br/>
-    [Topic Trigger Pair](./Classes_structs_enums.md#TODO)<br/>
+## [Structs](./Classes_structs_enums.md#structures---ustruct)
+    [Diagen Subsystem Config](./Classes_structs_enums.md#diagen-subsystem-config)<br/>
+    [Diagen Prompt Config](./Classes_structs_enums.md#diagen-prompt-config)<br/>
+    [Prompt Message](./Classes_structs_enums.md#prompt-message)<br/>
+    [NPC Description Priority](./Classes_structs_enums.md#npc-description-priority)<br/>
+    [Session State](./Classes_structs_enums.md#session-state)<br/>
+    [Topic Trigger Pair](./Classes_structs_enums.md#topic-trigger-pair)<br/>
 
-## [Data Table Structs](./Classes_structs_enums.md#TODO)
-    [Character Information Table (CI Table)](./Classes_structs_enums.md#TODO)<br/>
-    [Diagen Event Table](./Classes_structs_enums.md#TODO)<br/>
-    [Topic Table](./Classes_structs_enums.md#TODO)<br/>
-    [Trigger Option Table](./Classes_structs_enums.md#TODO)<br/>
-    [Prefix Option Table](./Classes_structs_enums.md#TODO)<br/>
-    <i style="color: red">**Deprecated**</i> - [Initial Session States Table](./Classes_structs_enums.md#TODO)<br/>
+## [Data Table Structs](./Classes_structs_enums.md#structures-for-data-table---ustruct)
+    [Character Information Table (CI Table)](./Classes_structs_enums.md#character-information-table-ci-table)<br/>
+    [Diagen Event Table](./Classes_structs_enums.md#diagen-event-table)<br/>
+    [Topic Table](./Classes_structs_enums.md#topic-table)<br/>
+    [State Tags Weight Table](./Classes_structs_enums.md#state-tags-weights-table)<br/>
+    <i style="color: red">**Deprecated**</i> - [Trigger Option Table](./Classes_structs_enums.md#trigger-option-table---deprecated)<br/>
+    <i style="color: red">**Deprecated**</i> - [Prefix Option Table](./Classes_structs_enums.md#prefix-option-table----deprecated)<br/>
+    <i style="color: red">**Deprecated**</i> - [Suffix Option Table](./Classes_structs_enums.md#suffix-option-table----deprecated)<br/>
+    <i style="color: red">**Deprecated**</i> - [Initial Session States Table](./Classes_structs_enums.md#initial-session-states-table----deprecated)<br/>
 
-## [Enums](./Classes_structs_enums.md#TODO)
-    [Diagen Subsystem Status](./Classes_structs_enums.md#TODO)<br/>
-    [Session Attribute Style](./Classes_structs_enums.md#TODO)<br/>
+## [Enums](./Classes_structs_enums.md#enumerations---uenum)
+    [Diagen Subsystem Status](./Classes_structs_enums.md#diagen-subsystem-status)<br/>
+    [Session Attribute Style](./Classes_structs_enums.md#session-attribute-type)<br/>
