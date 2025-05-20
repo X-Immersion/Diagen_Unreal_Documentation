@@ -10,7 +10,7 @@ The following nodes are not directly used by the Diagen plugin, but can be very 
 * [Get File Content](#get-file-content)<br/>
 * [Parse Into Array Lines](#parse-into-array-lines)<br/>
 * [Replace Regex Matches](#replace-regex-matches)<br/>
-* [Sort NPC Description Priority Array]()<br/>
+* [Sort NPC Description Priority Array](#sort-npc-description-priority-array)<br/>
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -30,14 +30,14 @@ Alternative node to find the state information for a given NPC on the current st
 
 | Name           | Type           | Default value            | Description                          |
 | -------------- | -------------- | ------------------------ | ------------------------------------ |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states           |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states           |
 | NPC Name       | const FString& | *empty string*           | The name of the NPC to get the data  |
 
 ### Return values
 
 | Name  | Type                    | Description                |
 | ----- | ----------------------- | -------------------------- |
-| State | [FSessionState](#TODO)& | The NPC state data         |
+| State | [FSessionState](./Classes_structs_enums.md#session-state)& | The NPC state data         |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -129,7 +129,7 @@ Similar to the Blueprint string node `Replace`, but use a Regex to search substr
 
 C++ Function: 
 ```cpp
-static int UDiagenUtilitiesLibrary::ReplaceRegexMatches()
+static void UDiagenUtilitiesLibrary::SortNPCDescriptionPriorityArray()
 ```
 
 Sort an array of string based on the string priority (weight). This can be really useful if you use your own logic to create the NPC system prompt, rather than using the node [Create Prompt](./LLM_prompting.md#create-prompt) *(i.e.: Construct the NPC system prompt from the CI table in the good order)*.
@@ -140,7 +140,7 @@ Sort an array of string based on the string priority (weight). This can be reall
 
 | Name  | Type                                             | Default value  | Description                          |
 | ----- | ------------------------------------------------ | -------------- | ------------------------------------ |
-| Array | TArray<[FNpcDescriptionPriority](#TODO)>&        | -              | The array to sort |
+| Array | TArray<[FNpcDescriptionPriority](./Classes_structs_enums.md#npc-description-priority)>&        | -              | The array to sort |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>

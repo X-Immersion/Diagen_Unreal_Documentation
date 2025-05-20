@@ -24,7 +24,7 @@ C++ Function:
 static void UDiagenLlmBPLibrary::StartDiagenLocalExecutable()
 ```
 
-Start the Diagen local executable and load the LLM model in memory. When the model is loaded, the event [On Diagen Initialized](#TODO) will be executed and you can start [prompting the model](/docs/API_reference/LLM_prompting.md).
+Start the Diagen local executable and load the LLM model in memory. When the model is loaded, the event [On Diagen Initialized](./Delegates.md#on-diagen-initialized) will be executed and you can start [prompting the model](/docs/API_reference/LLM_prompting.md).
 
 ![Node Start Diagen Local Exec](/docs/images/node_start_diagen_local.png)
 
@@ -32,8 +32,8 @@ Start the Diagen local executable and load the LLM model in memory. When the mod
 
 | Name                  | Type                       | Default value | Description |
 | --------------------- | -------------------------- | ------------- | ----------- |
-| Config                | const [FDiagenSubsystemConfig](#TODO)& | - | The Diagen executable configuration |
-| On Diagen Initialized | [FOnDiagenInitialized](#TODO)          | - | Delegate event called when the executable is ready to use (or if an error occured) |
+| Config                | const [FDiagenSubsystemConfig](./Classes_structs_enums.md#diagen-subsystem-config)& | - | The Diagen executable configuration |
+| On Diagen Initialized | [FOnDiagenInitialized](./Delegates.md#on-diagen-initialized)          | - | Delegate event called when the executable is ready to use (or if an error occured) |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -69,7 +69,7 @@ Get the current status of Diagen Local Executable.
 
 | Name          | Type                            | Description        |
 | ------------- | ------------------------------  | ------------------ |
-| Return Value  | [EDiagenSubsystemStatus](#TODO) | The current status |
+| Return Value  | [EDiagenSubsystemStatus](./Classes_structs_enums.md#diagen-subsystem-status) | The current status |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>

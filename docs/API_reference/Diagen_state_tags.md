@@ -4,7 +4,7 @@
 
 ## On this page
 
-The following nodes can be used to manage the state tags in the current [session](#TODO) for the given NPC (the NPC must have been added to the session).
+The following nodes can be used to manage the state tags in the current [session](./Classes_structs_enums.md#session-state) for the given NPC (the NPC must have been added to the session).
 
 * [Append NPC State Tags](#append-npc-state-tags)<br/>
 * [Remove NPC State Tags](#remove-npc-state-tags)<br/>
@@ -34,14 +34,14 @@ Append the state tags with those already present for the given NPC on the curren
 | Name           | Type           | Default value            | Description |
 | -------------- | -------------- | ------------------------ | ----------- |
 | NPC Name       | const FString& | *empty string*           | The name of the NPC to append the tags |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 | State Tags     | const TArray\<FString>& | -               | The tags that will be append to the already existing NPC tags |
 
 ### Return values
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -62,14 +62,14 @@ Remove the state tags from the given NPC on the current session. Does nothing if
 | Name           | Type           | Default value            | Description |
 | -------------- | -------------- | ------------------------ | ----------- |
 | NPC Name       | const FString& | *empty string*           | The name of the NPC to remove the tags |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 | State Tags     | const TArray\<FString>& | -               | The tags that will be removed to the NPC tags |
 
 ### Return values
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -90,13 +90,13 @@ Remove all the state tags from the given NPC on the current session.
 | Name           | Type           | Default value            | Description |
 | -------------- | -------------- | ------------------------ | ----------- |
 | NPC Name       | const FString& | *empty string*           | The name of the NPC to remove **all** the tags |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 
 ### Return values
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -117,14 +117,14 @@ Check if the given state tags are defined for the given NPC on the current sessi
 | Name                  | Type                    | Default value   | Description |
 | --------------------- | ----------------------- | --------------- | ----------- |
 | NPC Name              | const FString&          | *empty string*  | The name of the NPC to check the tags |
-| Session States        | const TArray<[FSessionState](#TODO)>& | - | The current session states            |
+| Session States        | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states            |
 | State Tags to Search  | const TArray\<FString>& | -               | The list of tags to search            |
 
 ### Return values
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Missing State Tags     | TArray<[FSessionState](#TODO)>& | The list of all tags that have not been found |
+| Missing State Tags     | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The list of all tags that have not been found |
 | Contains               | bool&                           | `true` if all search tags have been found, `false` otherwise |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
@@ -146,7 +146,7 @@ Get the state tags for the given NPC on the current session.
 | Name                  | Type                    | Default value   | Description |
 | --------------------- | ----------------------- | --------------- | ----------- |
 | NPC Name              | const FString&          | *empty string*  | The name of the NPC to get the tags   |
-| Session States        | const TArray<[FSessionState](#TODO)>& | - | The current session states            |
+| Session States        | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states            |
 
 ### Return values
 
@@ -173,7 +173,7 @@ Set the state tags for the given NPC on the current session. Uses [Append NPC St
 | Name                  | Type                    | Default value   | Description |
 | --------------------- | ----------------------- | --------------- | ----------- |
 | NPC Name              | const FString&          | *empty string*  | The name of the NPC to set the tags   |
-| Session States        | const TArray<[FSessionState](#TODO)>& | - | The current session states            |
+| Session States        | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states            |
 | New State Tags        | const TArray\<FString>& | -               | The list of tags set to the NPC       |
 
 ### Return values

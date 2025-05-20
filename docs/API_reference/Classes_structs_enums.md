@@ -1,4 +1,4 @@
-# [UCLASS()](#classes---uclass), [UFUNCTION()]() and [UENUM()]()
+# [UCLASS()](#classes---uclass), [USTRUCT()](#structures---ustruct) and [UENUM()](#enumerations---uenum)
 
 **[← API Reference](/docs/API_reference/README.md)**
 
@@ -298,7 +298,7 @@ USTRUCT(BlueprintType)
 struct DIAGEN_API FTopicsTable : public FTableRowBase {...}
 ```
 
-You can use this Data Table format to store all information about a Diagen topic. They are mostly used with the node [Enable NPC Topic(s)](./Diagen_topics_events.md#enable-npc-topics).
+You can use this Data Table format to store all information about a Diagen topic. They are mostly used with the nodes [Enable NPC Topic(s)](./Diagen_topics_events.md#enable-npc-topics) and [Diagen LLM Topic Detection](./LLM_prompting.md#diagen-llm-topic-detection).
 
 ![Struct Topic Table](/docs/images/struct_topic_table.png)
 

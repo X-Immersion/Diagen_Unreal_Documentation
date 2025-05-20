@@ -20,7 +20,7 @@ C++ Function:
 static void UDiagenLlmBPLibrary::BindStream()
 ```
 
-Bind a [stream delegate](#TODO) (event) to the diagen LLM stream.
+Bind a [stream delegate](./Delegates.md#on-diagen-stream-response-part) (event) to the diagen LLM stream.
 
 ![Node bind stream](/docs/images/node_bind_event_to_diagen_stream.png)
 
@@ -28,7 +28,7 @@ Bind a [stream delegate](#TODO) (event) to the diagen LLM stream.
 
 | Name  | Type                                        | Default value | Description |
 | ----- | ------------------------------------------- | ------------- | ----------- |
-| Event | const [FOnDiagenStreamResponsePart](#TODO)& | -             | Delegate event called each time a stream part has been generated (from all prompts) |
+| Event | const [FOnDiagenStreamResponsePart](./Delegates.md#on-diagen-stream-response-part)& | -             | Delegate event called each time a stream part has been generated (from all prompts) |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -40,7 +40,7 @@ C++ Function:
 static void UDiagenLlmBPLibrary::UnbindStream()
 ```
 
-Unbind an existing [stream delegate](#TODO) (event) from the diagen LLM stream.
+Unbind an existing [stream delegate](./Delegates.md#on-diagen-stream-response-part) (event) from the diagen LLM stream.
 
 ![Node unbind stream](/docs/images/node_unbind_event_to_diagen_stream.png)
 
@@ -48,7 +48,7 @@ Unbind an existing [stream delegate](#TODO) (event) from the diagen LLM stream.
 
 | Name  | Type                                        | Default value | Description |
 | ----- | ------------------------------------------- | ------------- | ----------- |
-| Event | const [FOnDiagenStreamResponsePart](#TODO)& | -             | Delegate event called each time a stream part has been generated (from all prompts) |
+| Event | const [FOnDiagenStreamResponsePart](./Delegates.md#on-diagen-stream-response-part)& | -             | Delegate event called each time a stream part has been generated (from all prompts) |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -60,7 +60,7 @@ C++ Function:
 static void UDiagenLlmBPLibrary::ClearStream()
 ```
 
-Unbind all existing [stream delegates](#TODO) (event) from the diagen LLM stream.
+Unbind all existing [stream delegates](./Delegates.md#on-diagen-stream-response-part) (event) from the diagen LLM stream.
 
 ![Node unbind all stream](/docs/images/node_unbind_all_events_to_diagen_stream.png)
 

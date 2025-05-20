@@ -4,7 +4,7 @@
 
 ## On this page
 
-The following nodes can be used to manage the Diagen session states, containing all NPCs and their [attributes](#TODO) (tags, triggers, topcis, history, ...).
+The following nodes can be used to manage the Diagen session states, containing all NPCs and their [attributes](./Classes_structs_enums.md#session-attribute-type) (tags, triggers, topcis, history, ...).
 
 * [Add NPC](#add-npc) - *previously InitSession()*<br/>
 * [Remove NPC](#remove-npc)<br/>
@@ -42,7 +42,7 @@ Add a new NPC to the session. If the NPC does already exist, reset the NPC data.
 
 | Name           | Type           | Default value      | Description |
 | -------------  | -------------- | ------------------ | ----------- |
-| Session States | TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 | NPC Name       | const FString& | *empty string*     | The name of the NPC to be added |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
@@ -63,7 +63,7 @@ Remove an NPC from the session. If the NPC is not in the session, does nothing.
 
 | Name           | Type           | Default value      | Description |
 | -------------  | -------------- | ------------------ | ----------- |
-| Session States | TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 | NPC Name       | const FString& | *empty string*     | The name of the NPC to be removed |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
@@ -84,7 +84,7 @@ Reset an NPC from the session. If the NPC is not in the session, does nothing.
 
 | Name           | Type           | Default value      | Description |
 | -------------  | -------------- | ------------------ | ----------- |
-| Session States | TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 | NPC Name       | const FString& | *empty string*     | The name of the NPC to be reset |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
@@ -105,7 +105,7 @@ Get the list of all NPCs defined in the current session.
 
 | Name           | Type           | Default value      | Description |
 | -------------  | -------------- | ------------------ | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 
 ### Return Value
 
@@ -132,7 +132,7 @@ Save the current session in 'Saved' dir.
 | Name           | Type           | Default value      | Description |
 | -------------  | -------------- | ------------------ | ----------- |
 | Save File Name | const FString& | *empty string*     | The save filename (extension is optional, default to .json) |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
 
 ### Return Value
 
@@ -164,7 +164,7 @@ Load the current session from 'Saved' dir.
 
 | Name           | Type             | Description |
 | -------------- | ---------------- | ----------- |
-| Session States | TArray<[FSessionState](#TODO)>& | - | The loaded session states from the save file |
+| Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The loaded session states from the save file |
 | Return Value | bool | `true` if the session states has been loaded, `false` otherwise |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
@@ -180,7 +180,7 @@ static void UDiagenSessionBPLibrary::ResetSession()
 > [!IMPORTANT]
 > The function is deprecated. Use [Reset NPC](#reset-npc) instead.
 
-Reset the current session for the NPC with the given [Session state table](#TODO).
+Reset the current session for the NPC with the given [Session state table](./Classes_structs_enums.md#initial-session-states-table----deprecated).
 
 ![Node reset Session](/docs/images/node_reset_session.png)
 
@@ -188,15 +188,15 @@ Reset the current session for the NPC with the given [Session state table](#TODO
 
 | Name           | Type           | Default value      | Description |
 | -------------  | -------------- | ------------------ | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states |
-| Initial States | UDataTable* | `nullptr`    | [???](#TODO) Cannot be empty but not used in C++ code. Just put anything |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states |
+| Initial States | UDataTable* | `nullptr`    | [Initial Session Table (deprecated)](./Classes_structs_enums.md#initial-session-states-table----deprecated). Cannot be empty but not used in C++ code. Just put anything |
 | NPC Name       | const FString& | *empty string*     | The name of the NPC to be reset |
 
 ### Return Value
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Initial States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Initial States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -208,7 +208,7 @@ C++ Function:
 static void UDiagenSessionBPLibrary::UpdateSessionArray()
 ```
 
-Update the current session `TArray<FString>` [attribute](#TODO) for the given NPC. 
+Update the current session `TArray<FString>` [attribute](./Classes_structs_enums.md#session-attribute-type) for the given NPC. 
 
 The following attributes can be used as an array of string:
 
@@ -223,9 +223,9 @@ The following attributes can be used as an array of string:
 
 | Name           | Type           | Default value       | Description |
 | -------------  | -------------- | ------------------- | ----------- |
-| Session States | TArray<[FSessionState](#TODO)>& | -  | The current session states  |
+| Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | -  | The current session states  |
 | NPC Name       | const FString& | *empty string*      | The NPC name to change the attribute |
-| Attribute      | const [ESessionAttributeType](#TODO)& | The attribute to update (see valid array attributes above) |
+| Attribute      | const [ESessionAttributeType](./Classes_structs_enums.md#session-attribute-type)& | The attribute to update (see valid array attributes above) |
 | Value          | const TArray\<FString>& | *empty array* | The value to update the attribute with |
 | Append         | const bool     | `false`             | If set to `true`, append the given array to the already existing one instead of replacing it . |
 
@@ -233,7 +233,7 @@ The following attributes can be used as an array of string:
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 
 <!------------------------------------------------------------------------------------------------------------------------------->
@@ -246,7 +246,7 @@ C++ Function:
 static void UDiagenSessionBPLibrary::UpdateSessionInt()
 ```
 
-Update the current session `int` [attribute](#TODO) for the given NPC. 
+Update the current session `int` [attribute](./Classes_structs_enums.md#session-attribute-type) for the given NPC. 
 
 The following attributes can be used as an integer:
 
@@ -258,16 +258,16 @@ The following attributes can be used as an integer:
 
 | Name           | Type           | Default value       | Description |
 | -------------  | -------------- | ------------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString& | *empty string*      | The NPC name to change the attribute |
-| Attribute      | const [ESessionAttributeType](#TODO)& | The attribute to update (see valid array attributes above) |
+| Attribute      | const [ESessionAttributeType](./Classes_structs_enums.md#session-attribute-type)& | The attribute to update (see valid array attributes above) |
 | Value          | int32 | *empty array* | The value to update the attribute with |
 
 ### Return Value
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -279,7 +279,7 @@ C++ Function:
 static void UDiagenSessionBPLibrary::UpdateSessionString()
 ```
 
-Update the current session `FString` [attribute](#TODO) for the given NPC. 
+Update the current session `FString` [attribute](./Classes_structs_enums.md#session-attribute-type) for the given NPC. 
 
 The following attributes can be used as a string:
 
@@ -291,16 +291,16 @@ The following attributes can be used as a string:
 
 | Name           | Type           | Default value       | Description |
 | -------------  | -------------- | ------------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString& | *empty string*      | The NPC name to change the attribute |
-| Attribute      | const [ESessionAttributeType](#TODO)& | The attribute to update (see valid array attributes above) |
+| Attribute      | const [ESessionAttributeType](./Classes_structs_enums.md#session-attribute-type)& | The attribute to update (see valid array attributes above) |
 | Value          | const FString& | *empty string*      | The value to update the attribute with |
 
 ### Return Value
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -312,7 +312,7 @@ C++ Function:
 static TArray\<FString> UDiagenSessionBPLibrary::GetSessionArray()
 ```
 
-Get the current session `TArray<FString>` [attribute](#TODO) for the given NPC. 
+Get the current session `TArray<FString>` [attribute](./Classes_structs_enums.md#session-attribute-type) for the given NPC. 
 
 The following attributes can be used as an array of string:
 
@@ -327,9 +327,9 @@ The following attributes can be used as an array of string:
 
 | Name           | Type           | Default value        | Description |
 | -------------  | -------------- | -------------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString& | *empty string*       | The NPC name to get the attribute from |
-| Attribute      | const [ESessionAttributeType](#TODO)& | The attribute to get (see valid array attributes above) |
+| Attribute      | const [ESessionAttributeType](./Classes_structs_enums.md#session-attribute-type)& | The attribute to get (see valid array attributes above) |
 
 ### Return Value
 
@@ -347,7 +347,7 @@ C++ Function:
 static int32 UDiagenSessionBPLibrary::GetSessionInt()
 ```
 
-Get the current session `int32` [attribute](#TODO) for the given NPC. 
+Get the current session `int32` [attribute](./Classes_structs_enums.md#session-attribute-type) for the given NPC. 
 
 The following attributes can be used as an integer:
 
@@ -359,9 +359,9 @@ The following attributes can be used as an integer:
 
 | Name           | Type           | Default value        | Description |
 | -------------  | -------------- | -------------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString& | *empty string*       | The NPC name to get the attribute from |
-| Attribute      | const [ESessionAttributeType](#TODO)& | The attribute to get (see valid array attributes above) |
+| Attribute      | const [ESessionAttributeType](./Classes_structs_enums.md#session-attribute-type)& | The attribute to get (see valid array attributes above) |
 
 ### Return Value
 
@@ -379,7 +379,7 @@ C++ Function:
 static FString UDiagenSessionBPLibrary::GetSessionString()
 ```
 
-Get the current session `FString` [attribute](#TODO) for the given NPC. 
+Get the current session `FString` [attribute](./Classes_structs_enums.md#session-attribute-type) for the given NPC. 
 
 The following attributes can be used as a string:
 
@@ -391,9 +391,9 @@ The following attributes can be used as a string:
 
 | Name           | Type           | Default value        | Description |
 | -------------  | -------------- | -------------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString& | *empty string*       | The NPC name to get the attribute from |
-| Attribute      | const [ESessionAttributeType](#TODO)& | The attribute to get (see valid array attributes above) |
+| Attribute      | const [ESessionAttributeType](./Classes_structs_enums.md#session-attribute-type)& | The attribute to get (see valid array attributes above) |
 
 ### Return Value
 
@@ -419,14 +419,14 @@ Clear the LLM conversation history for the given NPC. Does nothing if the NPC is
 
 | Name           | Type           | Default value        | Description |
 | -------------- | -------------- | -------------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString& | *empty string*       | The NPC name to reset the history |
 
 ### Return Value
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -446,7 +446,7 @@ Add the LLM conversation entry (user question + LLM response) to the history for
 
 | Name           | Type           | Default value        | Description |
 | -------------- | -------------- | -------------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString& | *empty string*       | The NPC name to update the history |
 | Question       | const FString& | *empty string*       | The message prompted to the LLM model |
 | Answer         | const FString& | *empty string*       | The response generated from the LLM model |
@@ -456,4 +456,4 @@ Add the LLM conversation entry (user question + LLM response) to the history for
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |

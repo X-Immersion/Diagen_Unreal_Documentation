@@ -31,14 +31,14 @@ Define enable topics for the given NPC on the current session.
 | Name           | Type                       | Default value  | Description |
 | -------------- | -------------------------- | -------------- | ----------- |
 | NPC Name       | const FString&             | *empty string* | The NPC name to enable the topic(s) |
-| Session States | const TArray<[FSessionState](#TODO)>& | -   | The current session states  |
-| Topic Table    | const UDataTable* | `nullptr`      | The [Topic table](#TODO) contains all topics | 
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | -   | The current session states  |
+| Topic Table    | const UDataTable* | `nullptr`      | The [Topic table](./Classes_structs_enums.md#topic-table) contains all topics | 
 
 ### Return values
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -59,7 +59,7 @@ Get enabled topics for the given NPC on the current session.
 | Name           | Type                       | Default value  | Description |
 | -------------- | -------------------------- | -------------- | ----------- |
 | NPC Name       | const FString&             | *empty string* | The NPC name to get enabled topic(s) |
-| Session States | const TArray<[FSessionState](#TODO)>& | -   | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | -   | The current session states  |
 
 ### Return values
 
@@ -85,7 +85,7 @@ Enable or diable the topics for the given NPC on the current session.
 
 | Name           | Type                     | Default value  | Description |
 | -------------- | ------------------------ | -------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString&           | *empty string* | The NPC name to enable/disble topics |
 | Topics         | const TArray\<FString>&   | -              | The list of topics to enable/disable |
 | Enable         | const bool               | `false`        | Enable or disable the topics |
@@ -95,7 +95,7 @@ Enable or diable the topics for the given NPC on the current session.
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 <br/>
@@ -115,16 +115,16 @@ Try to trigger a Diagen event, and return the event data if successful.
 
 | Name           | Type            | Default value  | Description |
 | -------------- | --------------- | -------------- | ----------- |
-| Event Name     | const FString&  | *empty string* | The event name (must match the row name in the [Event table](#TODO)) |
+| Event Name     | const FString&  | *empty string* | The event name (must match the row name in the [Event table](./Classes_structs_enums.md#diagen-event-table)) |
 | NPC Name       | const FString&  | *empty string* | The NPC name to trigger the event |
-| Diagen Events  | UDataTable*     | `nullptr`      | The [Event table](#TODO) with the Diagen events | 
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Diagen Events  | UDataTable*     | `nullptr`      | The [Event table](./Classes_structs_enums.md#diagen-event-table) with the Diagen events | 
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 
 ### Return values
 
 | Name                   | Type                            | Description                |
 | ---------------------- | ------------------------------- | -------------------------- |
-| Updated Session States | TArray<[FSessionState](#TODO)>& | The updated session states |
+| Updated Session States | TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | The updated session states |
 | Verbatime              | FString&                        | The static vebatim |
 | Instruction            | FString&                        | The instruction that can then be used with the node [Instruction to Verbatime](./LLM_prompting.md#instruction-to-verbatime) | 
 | Return Event           | FString&                        | The event 'return trigger' column value |
@@ -148,9 +148,9 @@ List all available events for the given NPC based on the current session.
 
 | Name           | Type            | Default value  | Description |
 | -------------- | --------------- | -------------- | ----------- |
-| Session States | const TArray<[FSessionState](#TODO)>& | - | The current session states  |
+| Session States | const TArray<[FSessionState](./Classes_structs_enums.md#session-state)>& | - | The current session states  |
 | NPC Name       | const FString&  | *empty string* | The NPC name to find the events |
-| Diagen Events  | UDataTable*     | `nullptr`      | The [Event table](#TODO) with the Diagen events | 
+| Diagen Events  | UDataTable*     | `nullptr`      | The [Event table](./Classes_structs_enums.md#diagen-event-table) with the Diagen events | 
 
 
 ### Return values
